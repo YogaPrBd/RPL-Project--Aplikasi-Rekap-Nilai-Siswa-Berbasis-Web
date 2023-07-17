@@ -1,0 +1,101 @@
+<form class="d-flex" style="max-width: 50%;">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col" style="width:1%; text-align:center;">No</th>
+                            <th scope="col" style="width:40%; text-align:center;">Nama</th>
+                            <th scope="col" style="width:20%; text-align:center;">Jenis Kelamin</th>
+                            <th scope="col" style="width:20%; text-align:center;">Kelas</th>
+                            <th scope="col" style="width:20%; text-align:center;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- List Data -->
+                        <tr class="align-middle">
+                            <th scope="row" style="text-align:center">1</th>
+                            <td>Ferry Munandar</td>
+                            <td style="text-align:center">Laki-Laki</td>
+                            <td style="text-align:center">8</td>
+                            <!-- Aksi -->
+                            <td style="text-align:center">
+                                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalEdit"> <i class="fa-regular fa-pencil"></i> Edit </button>&nbsp;
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalHapus"><i class="fa-regular fa-trash"></i> Hapus</button>
+                            </td>
+
+                            <!-- Modal Edit data -->
+                                <div class="modal fade" id="modalEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel"><i class="fa-regular fa-pencil"></i> Edit Siswa</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <form action="" method="post">
+                                        <div class="row mb-3" style="max-width:800px">
+                                            <label for="inputNama" class="col-sm-2 col-form-label" >Nama Lengkap</label>
+                                            <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputNama" value="Muhammad Ferry Munandar" require>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3" style="max-width:800px">
+                                            <label for="inputJK" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                                            <div class="col-auto">
+                                                <select class="form-select" id="inputJK">
+                                                   
+                                                    <option  value="Laki-Laki">Laki-Laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3" style="max-width:800px">
+                                            <label for="inputKelas" class="col-sm-2 col-form-label">Kelas</label>
+                                            <div class="col-auto">
+                                                <select class="form-select" id="inputKelas" require>
+                                                    
+                                                    <option value="7">7 (Tujuh)</option>
+                                                    <option value="8">8 (Delapan)</option>
+                                                    <option value="9">9 (Sembilan)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-dark" style="background-color:#12427b">Simpan</button>
+                                    </form>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <!-- Akhir Modal Edit -->
+                                <!-- Modal Hapus -->
+                                <div class="modal fade" id="modalHapus" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Hapus Siswa</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <form action="" method="post">
+                                        Anda Yakin Hapus siswa <b>Muhammad Ferry Munandar</b>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-dark" style="background-color:#12427b">Hapus</button>
+                                    </form>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </tr>
+                        
+                    </tbody>
+                </table>
